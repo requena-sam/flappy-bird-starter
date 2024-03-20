@@ -1,14 +1,9 @@
 import {settings} from "./settings";
+import {Drawable} from "./Drawable";
 
-export class Background {
-    private ctx: CanvasRenderingContext2D;
-    private canvas: HTMLCanvasElement;
-    private sprite: HTMLImageElement;
-
+export class Background extends Drawable {
     constructor(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, sprite: HTMLImageElement) {
-        this.ctx = ctx;
-        this.canvas = canvas;
-        this.sprite = sprite;
+        super(ctx, canvas, sprite);
     }
 
     draw() {
@@ -22,6 +17,6 @@ export class Background {
             settings.background.frame.dy,
             settings.background.frame.dw,
             settings.background.frame.dh,
-            );
+        );
     }
 }
