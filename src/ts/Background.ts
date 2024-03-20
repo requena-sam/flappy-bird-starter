@@ -1,7 +1,8 @@
 import {settings} from "./settings";
 import {Drawable} from "./Drawable";
+import {IDrawable} from "./Types/IDrawable";
 
-export class Background extends Drawable {
+export class Background extends Drawable implements IDrawable {
     constructor(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, sprite: HTMLImageElement) {
         super(ctx, canvas, sprite);
     }
