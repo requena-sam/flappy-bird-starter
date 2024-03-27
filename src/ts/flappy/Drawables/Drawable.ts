@@ -1,6 +1,6 @@
 import {IAnimatable} from "../Types/IAnimatable";
 
-export abstract class Drawable implements IAnimatable {
+export abstract class Drawable {
     protected canvas: HTMLCanvasElement;
     protected ctx: CanvasRenderingContext2D;
     protected sprite: HTMLImageElement;
@@ -9,11 +9,5 @@ export abstract class Drawable implements IAnimatable {
         this.canvas = canvas;
         this.ctx = ctx;
         this.sprite = sprite;
-    }
-
-    draw(): void {
-    }
-
-    update(): void {
     }
 }
