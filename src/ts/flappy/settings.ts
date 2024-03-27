@@ -4,12 +4,15 @@ export const settings = {
         gravity: 0.9,
         width: 34,
         height: 24,
-        maxFrameInterval: 5,
+        maxFrameInterval: 3,
         frames: [
             {sx: 6, sy: 982},
             {sx: 62, sy: 982},
             {sx: 118, sy: 982}
-        ]
+        ],
+        fractionX: 3,
+        fractionY: 2,
+
     },
     background: {
         frame: {
