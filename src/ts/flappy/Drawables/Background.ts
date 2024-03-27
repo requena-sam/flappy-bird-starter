@@ -1,10 +1,10 @@
-import {settings} from "./settings";
+import {settings} from "../settings";
 import {Drawable} from "./Drawable";
-import {IDrawable} from "./Types/IDrawable";
+import {IAnimatable} from "../Types/IAnimatable";
 
-export class Background extends Drawable implements IDrawable {
-    constructor(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, sprite: HTMLImageElement) {
-        super(ctx, canvas, sprite);
+export class Background extends Drawable implements IAnimatable {
+    constructor(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D, sprite: HTMLImageElement) {
+        super(canvas, ctx, sprite);
     }
 
     draw() {
@@ -20,4 +20,6 @@ export class Background extends Drawable implements IDrawable {
             settings.background.frame.dh,
         );
     }
+
+    update() {} // No need to update the background because it's static
 }
