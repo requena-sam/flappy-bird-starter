@@ -1,7 +1,7 @@
 export const settings = {
     birdie: {
         maxFallSpeed: 7,
-        gravity: 0.9,
+        gravity: 0.7,
         width: 34,
         height: 24,
         maxFrameInterval: 6,
@@ -12,7 +12,6 @@ export const settings = {
         ],
         fractionX: 3,
         fractionY: 2,
-
     },
     background: {
         frame: {
@@ -40,7 +39,7 @@ export const settings = {
     },
     tubes: {
         gap: 80,
-        speed: 3,
+        speed: 2.5,
         sw: 52,
         sh: 320,
         dx: 0,
@@ -59,7 +58,5 @@ export const settings = {
             sx: 168,
             sy: 647,
         },
-
-
     },
 }

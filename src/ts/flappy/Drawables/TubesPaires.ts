@@ -5,7 +5,7 @@ import {settings} from "../settings";
 import {Random} from "../../framework/helpers/Random";
 
 export class TubesPaires extends Drawable implements IAnimatable {
-    private tubesPairs: TubesPair[] = [];
+    public tubesPairs: TubesPair[] = [];
     private frameCount: number;
     private maxFrameInterval: number;
 

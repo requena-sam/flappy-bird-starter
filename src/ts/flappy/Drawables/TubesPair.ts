@@ -4,15 +4,15 @@ import {Random} from "../../framework/helpers/Random";
 import {settings} from "../settings";
 
 export class TubesPair extends Drawable implements IAnimatable {
-    private topY: number;
-    private x: number;
-    private bottomY: number;
+    x:number;
+    topY:number;
+    bottomY: number;
 
     constructor(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D, sprite: HTMLImageElement) {
         super(canvas, ctx, sprite);
         this.x = this.canvas.width;
         this.topY = Random.int(settings.tubes.randomY.min, settings.tubes.randomY.max);
-        this.bottomY = this.topY + settings.tubes.sh + settings.tubes.gap
+        this.bottomY = this.topY + settings.tubes.sh + settings.tubes.gap;
     }
 
     draw() {
@@ -27,6 +27,7 @@ export class TubesPair extends Drawable implements IAnimatable {
             settings.tubes.dw,
             settings.tubes.dh,
         );
+
         this.ctx.drawImage(
             this.sprite,
             settings.tubes.bottom.sx,
@@ -42,5 +43,7 @@ export class TubesPair extends Drawable implements IAnimatable {
 
     update() {
         this.x -= settings.tubes.speed;
+
+        // counter, array of tubes, increment tubes in the array
     }
 }
