@@ -4,7 +4,7 @@ export const settings = {
         gravity: 0.9,
         width: 34,
         height: 24,
-        maxFrameInterval: 3,
+        maxFrameInterval: 6,
         frames: [
             {sx: 6, sy: 982},
             {sx: 62, sy: 982},
